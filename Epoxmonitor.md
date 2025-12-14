@@ -1,1 +1,146 @@
 # EpoxMonitor - step by step guide
+
+## Projektöversikt
+
+Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas.
+
+---
+
+## Användare och kontext
+
+**Användare:** Yrkeshantverkare som arbetar med epoxi (t.ex. golvläggare).
+
+**Kontext:** Industrilokaler och arbetsmiljöer med tidspress, varierande klimat och begränsad möjlighet till manuell mätning.
+
+**Behov:** Snabb och tydlig information om luftfuktighet utan att behöva tolka rådata.
+
+---
+
+## Systembeskrivning
+
+Systemet består av en sensor som mäter luftfuktighet och skickar data trådlöst till ett webbgränssnitt.
+
+**Beståndsdelar:**
+
+* DHT11 – luftfuktighetssensor
+* ESP8266 – mikrokontroller med WiFi
+* MQTT – protokoll för datakommunikation
+* Webbgränssnitt – visualisering av data
+
+---
+
+## Sensor (DHT11) och konstruktion (ESP8266)
+<img width="181" height="160" alt="image" src="https://github.com/user-attachments/assets/03f903f6-3a82-414c-af93-8d2b28bf288d" /> <img width="146" height="244" alt="image" src="https://github.com/user-attachments/assets/97cb8c23-f889-4a9e-b3af-e6768a791448" />
+
+
+**Koppling:**
+
+* VCC → 3.3V
+* GND → GND
+* DATA → D4
+
+---
+
+## Steg 1 – Installera utvecklingsmiljö
+
+1. Ladda ner och installera Arduino IDE
+2. Lägg till ESP8266 via Board Manager
+3. Välj rätt board (ESP8266) och port
+
+---
+
+## Steg 2 – Installera bibliotek
+
+Följande bibliotek används:
+
+* DHT Sensor Library – för att läsa luftfuktighet
+* Adafruit Unified Sensor – beroende för DHT
+* ArduinoMqttClient – MQTT-kommunikation
+* WiFiUdp.h - WiFi
+* PubSubClient.h - 
+* NTPClient – tidsstämplar
+
+---
+
+## Steg 3 – Programmera sensorn
+
+Koden:
+
+* Initierar WiFi-anslutning
+* Läser luftfuktighet från DHT11
+* Hämtar aktuell tid via NTP
+* Skickar data till MQTT-broker
+
+Mätning sker varannan sekund.
+
+## Steg 4 - Ladda ned Mosquitto (MQTT-applikation)
+Ladda ned Mosquitto på följande länk: ​ https://mosquitto.org/download/
+
+Öppna kommandotolk och skriv in följande för att starta applikationen lokalt: 
+<img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
+
+Sensorn publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber (VSC) som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka. 
+
+​
+
+
+---
+
+## Steg 4 – MQTT och dataflöde
+
+Sensorn publicerar mätdata till en MQTT-broker.
+
+**Exempel på payload:**
+
+```json
+{
+  "tid": 1700000000,
+  "rh": 42.3
+}
+```
+
+MQTT används eftersom det är lättviktigt och lämpat för IoT-system.
+
+---
+
+## Visualisering
+
+Gränssnittet visar:
+
+* Aktuell luftfuktighet (RH nu)
+* Status (Live)
+* Grön zon för optimal RH
+* 24-timmars historik i linjediagram
+
+Visualiseringen gör det möjligt att se både nuvarande värde och trender över tid.
+
+---
+
+## Designanpassning
+
+* Endast luftfuktighet visas för att minska kognitiv belastning
+* Grön zon ger direkt normativ vägledning
+* Mobilanpassat gränssnitt för användning på arbetsplats
+
+---
+
+## Förväntad kunskap och nytta
+
+Systemet ger användaren kunskap om:
+
+* När luftfuktigheten är lämplig för applicering av epoxi
+* Om klimatet varit stabilt under de senaste 24 timmarna
+
+Detta minskar risken för felaktig härdning och materialskador.
+
+---
+
+## Projektstatus
+
+Projektet mäter och visualiserar luftfuktighet i realtid. Nästa steg är vidare utvärdering av gränsvärden och förbättrad konstruktion av sensorfästet.
+
+---
+
+## Projektloggbok
+
+Se separat fil: `ProjektLogBok.md`

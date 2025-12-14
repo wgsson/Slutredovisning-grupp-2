@@ -129,15 +129,3 @@ Systemet ger användaren kunskap om:
 * Om klimatet varit stabilt under de senaste 24 timmarna
 
 Detta minskar risken för felaktig härdning och materialskador.
-
----
-
-## Projektstatus
-
-Projektet mäter och visualiserar luftfuktighet i realtid. Nästa steg är vidare utvärdering av gränsvärden och förbättrad konstruktion av sensorfästet.
-
----
-
-## Projektloggbok
-
-Se separat fil: `ProjektLogBok.md`

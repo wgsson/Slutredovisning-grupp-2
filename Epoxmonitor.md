@@ -1,1 +1,1 @@
-# E P O X monitor
+# EpoxMonitor - step by step guide

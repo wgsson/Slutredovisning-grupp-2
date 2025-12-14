@@ -4,6 +4,16 @@
 
 Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas.
 
+## Bill of Materials
+<img width="205" height="182" alt="image" src="https://github.com/user-attachments/assets/cf9015f9-0a62-4e25-9dac-1f5e90f93b6b" />
+
+* Plusivokit
+  - DHT11 - RH-sensor
+  - ESP8266 – mikrokontroller med WiFi
+  - Batteri/USB-c
+* Arduino IDE
+* Mosquitto Eclipse - MQTT för datakommunikation
+* Visual Studio Code - visualisering av data
 ---
 
 ## Användare och kontext
@@ -13,19 +23,6 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 **Kontext:** Industrilokaler och arbetsmiljöer med tidspress, varierande klimat och begränsad möjlighet till manuell mätning.
 
 **Behov:** Snabb och tydlig information om luftfuktighet utan att behöva tolka rådata.
-
----
-
-## Systembeskrivning
-
-Systemet består av en sensor som mäter luftfuktighet och skickar data trådlöst till ett webbgränssnitt.
-
-**Beståndsdelar:**
-
-* DHT11 – luftfuktighetssensor
-* ESP8266 – mikrokontroller med WiFi
-* MQTT – protokoll för datakommunikation
-* Webbgränssnitt – visualisering av data
 
 ---
 

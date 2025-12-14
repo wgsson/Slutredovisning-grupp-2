@@ -39,6 +39,8 @@ Systemet består av en sensor som mäter luftfuktighet och skickar data trådlö
 * GND → GND
 * DATA → D4
 
+Tips: ESP8266-guide ligger i repot!
+
 ---
 
 ## Steg 1 – Installera utvecklingsmiljö
@@ -46,7 +48,6 @@ Systemet består av en sensor som mäter luftfuktighet och skickar data trådlö
 1. Ladda ner och installera Arduino IDE
 2. Lägg till ESP8266 via Board Manager
 3. Välj rätt board (ESP8266) och port
-
 ---
 
 ## Steg 2 – Installera bibliotek
@@ -60,48 +61,44 @@ Följande bibliotek används:
 * PubSubClient.h - 
 * NTPClient – tidsstämplar
 
----
-
 ## Steg 3 – Programmera sensorn
 
-Koden:
+1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
+2. Tryck "Upload"
+3. Öppna Tools och tryck på Serial Monitor
+4. Säkerställ att mikrokontrollen är ansluten till Wi-fi
+5. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
+
+Följande kommer alltså att ske:
 
 * Initierar WiFi-anslutning
 * Läser luftfuktighet från DHT11
 * Hämtar aktuell tid via NTP
-* Skickar data till MQTT-broker
+* Skickar data till MQTT-broker (test.mosquitto.org) 
 
 Mätning sker varannan sekund.
 
-## Steg 4 - Ladda ned Mosquitto (MQTT-applikation)
+## Steg 4- Ladda ned Mosquitto (MQTT-applikation)
 Ladda ned Mosquitto på följande länk: ​ https://mosquitto.org/download/
 
 Öppna kommandotolk och skriv in följande för att starta applikationen lokalt: 
+
+->**cd C:"Program Files\mosquitto**
+-> **mosquitto.exe** 
+-> **mosquitto.exe -v**
+
+Följande för att starta en publisher:
+->**mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
+
+Följande för att starta en subscriber: 
+-> **mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
+I detta fönster bör nu data skickad från sensorn dyka upp. 
+
 <img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
 
-Sensorn publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber (VSC) som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka. 
+Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber (VSC) som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka.
 
-​
-
-
----
-
-## Steg 4 – MQTT och dataflöde
-
-Sensorn publicerar mätdata till en MQTT-broker.
-
-**Exempel på payload:**
-
-```json
-{
-  "tid": 1700000000,
-  "rh": 42.3
-}
-```
-
-MQTT används eftersom det är lättviktigt och lämpat för IoT-system.
-
----
+## Steg 5 VSC-visualisering
 
 ## Visualisering
 

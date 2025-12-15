@@ -125,7 +125,7 @@ Skapa följande dokument i VSC och klistra in bifogad kod:
 
   Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
 
-<img width="265" height="408" alt="image" src="https://github.com/user-attachments/assets/ab2f12b3-7c3e-4ee4-a021-550942a64270" />
+<img width="260" height="379" alt="image" src="https://github.com/user-attachments/assets/5da648c3-3762-4604-b10d-adea24fe55d3" />
 
 
 Gränssnittet visar:

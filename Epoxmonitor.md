@@ -103,6 +103,8 @@ Ladda ned Mosquitto på följande länk: ​ https://mosquitto.org/download/
 -> **mosquitto.exe** 
 -> **mosquitto.exe -v**
 
+<img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
+
 Följande för att starta en publisher:
 ->**mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
 
@@ -110,7 +112,7 @@ Följande för att starta en subscriber:
 -> **mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
 I detta fönster bör nu data skickad från sensorn dyka upp. 
 
-<img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
+
 
 Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber, vår hemsida (VSC), som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka.
 

@@ -75,10 +75,12 @@ Följande bibliotek används:
 ## Steg 3 – Programmera sensorn
 
 1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
-2. Tryck "Upload"
-3. Öppna Tools och tryck på Serial Monitor
-4. Säkerställ att mikrokontrollen är ansluten till Wi-fi
-5. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
+2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
+3. Välj rätt "Port" under "Tools"
+4. Tryck "Upload"
+5. Öppna Tools och tryck på Serial Monitor
+6. Säkerställ att mikrokontrollen är ansluten till Wi-fi
+7. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
 
 Följande kommer alltså att ske:
 
@@ -113,8 +115,10 @@ Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQ
 
 ---
 
-## Steg 5 VSC-visualisering
-- JavaScript
+## Steg 5 VSC
+Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
+Skapa följande dokument i VSC och klistra in bifogad kod:
+- JavaScript (
 - HTML
 - CSS
 

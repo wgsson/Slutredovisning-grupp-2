@@ -5,15 +5,26 @@
 Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas.
 
 ## Bill of Materials
-<img width="205" height="182" alt="image" src="https://github.com/user-attachments/assets/cf9015f9-0a62-4e25-9dac-1f5e90f93b6b" />
-
+### Material
+* Dator
 * Plusivokit
   - DHT11 - RH-sensor
   - ESP8266 – mikrokontroller med WiFi
-  - Batteri/USB-c
-* Arduino IDE
-* Mosquitto Eclipse - MQTT för datakommunikation
-* Visual Studio Code - visualisering av data
+  - Batteri + DC-sladd
+  - Breadboard
+  - Kopplingskablar
+<img width="205" height="182" alt="image" src="https://github.com/user-attachments/assets/cf9015f9-0a62-4e25-9dac-1f5e90f93b6b" />
+
+### Program
+* Arduino IDE 
+
+* Mosquitto Eclipse - MQTT för datakommunikation 
+
+* Visual Studio Code - visualisering av data 
+
+<img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/15c86fdf-2ee7-46ad-aba9-5888d537b975" /> <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/d02ea206-3b95-417e-9c20-4f8fe3a27cc7" /> <img width="80" height="600" alt="image" src="https://github.com/user-attachments/assets/02b8c254-986d-4f0f-ba5d-9cc45071f9b3" />
+
+
 ---
 
 ## Användare och kontext
@@ -35,6 +46,9 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 * VCC → 3.3V
 * GND → GND
 * DATA → D4
+
+<img width="190" height="188" alt="image" src="https://github.com/user-attachments/assets/e1887f25-1ebd-4ce2-95cb-fc232794cdf4" />
+
 
 Tips: ESP8266-guide ligger i repot!
 
@@ -75,6 +89,8 @@ Följande kommer alltså att ske:
 
 Mätning sker varannan sekund.
 
+---
+
 ## Steg 4- Ladda ned Mosquitto (MQTT-applikation)
 Ladda ned Mosquitto på följande länk: ​ https://mosquitto.org/download/
 
@@ -93,9 +109,14 @@ I detta fönster bör nu data skickad från sensorn dyka upp.
 
 <img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
 
-Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber (VSC) som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka.
+Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber, vår hemsida (VSC), som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka.
+
+---
 
 ## Steg 5 VSC-visualisering
+- JavaScript
+- HTML
+- CSS
 
 ## Visualisering
 
@@ -126,3 +147,8 @@ Systemet ger användaren kunskap om:
 * Om klimatet varit stabilt under de senaste 24 timmarna
 
 Detta minskar risken för felaktig härdning och materialskador.
+
+## Kapsulering
+
+## Presentation av slutresultat
+

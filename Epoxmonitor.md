@@ -118,16 +118,18 @@ Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQ
 ## Steg 5 VSC
 Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
 Skapa följande dokument i VSC och klistra in bifogad kod:
-- JavaScript (
-- HTML
-- CSS
+- JavaScript (app.js)
+- HTML (index.html)
+- CSS (style.css)
 
-## Visualisering
+  Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
+
+<img width="265" height="408" alt="image" src="https://github.com/user-attachments/assets/ab2f12b3-7c3e-4ee4-a021-550942a64270" />
+
 
 Gränssnittet visar:
 
 * Aktuell luftfuktighet (RH nu)
-* Status (Live)
 * Grön zon för optimal RH
 * 24-timmars historik i linjediagram
 

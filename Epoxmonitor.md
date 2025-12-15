@@ -47,7 +47,8 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 * GND → GND
 * DATA → D4
 
-<img width="190" height="188" alt="image" src="https://github.com/user-attachments/assets/e1887f25-1ebd-4ce2-95cb-fc232794cdf4" />
+<img width="272" height="390" alt="image" src="https://github.com/user-attachments/assets/f566f9ec-bb10-43c1-a04c-4eb342e4d932" />
+
 
 
 Tips: ESP8266-guide ligger i repot!

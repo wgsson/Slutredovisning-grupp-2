@@ -126,36 +126,3 @@ Skapa följande dokument i VSC och klistra in bifogad kod:
   Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
 
 <img width="260" height="379" alt="image" src="https://github.com/user-attachments/assets/5da648c3-3762-4604-b10d-adea24fe55d3" />
-
-
-Gränssnittet visar:
-
-* Aktuell luftfuktighet (RH nu)
-* Grön zon för optimal RH
-* 24-timmars historik i linjediagram
-
-Visualiseringen gör det möjligt att se både nuvarande värde och trender över tid.
-
----
-
-## Designanpassning
-
-* Endast luftfuktighet visas för att minska kognitiv belastning
-* Grön zon ger direkt normativ vägledning
-* Mobilanpassat gränssnitt för användning på arbetsplats
-
----
-
-## Förväntad kunskap och nytta
-
-Systemet ger användaren kunskap om:
-
-* När luftfuktigheten är lämplig för applicering av epoxi
-* Om klimatet varit stabilt under de senaste 24 timmarna
-
-Detta minskar risken för felaktig härdning och materialskador.
-
-## Kapsulering
-
-## Presentation av slutresultat
-

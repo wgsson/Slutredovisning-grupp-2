@@ -131,7 +131,7 @@ Bild på kapsulering här
 
 - Målet med väggfästet är att NodeMCU och DHT11-sensorn ska sitta skyddade och på rätt höjd för att kunna mäta luftfuktigheten och ge pålitliga värden. Lösningen består av en plastkapsling där mikrokontrollern placeras, medan DHT11-sensorn monteras i ett litet hål i kapslingen så att själva sensordelen sticker ut i luften. Detta görs för att undvika inkapslingspåverkan, där sensorn annars riskerar att mäta luften i kapslingen istället för luften i rummet.
 
-- På baksidan av kapslingen sitter ett magnetfäste. Detta tillåter sensorn att enkelt fästas direkt på metallväggar i industrilokaler. Om väggen inte är av metall kan en tunn metallplatta fästas med dubbelhäftande tejp. Denna lösning är effektiv då den inte kräver verktyg och skadar inte väggarna. Magnet fästet gör det även enkelt att ta ner, flytta och sätta upp sensorn vid behov.
+- På baksidan av kapslingen sitter ett magnetfäste. Detta tillåter sensorn att enkelt fästas direkt på metallväggar i industrilokaler. Om väggen inte är av metall kan en tunn metallplatta fästas med dubbelhäftande tejp. Denna lösning är effektiv då den inte kräver verktyg och skadar inte väggarna. Magnet fästet gör det även enkelt att ta ner, flytta och sätta upp sensorn vid behov. Viktigt att tänka på är placeringen av sensorn då luftflöden som öppna dörrar eller ventilationer kan påverka mätvärdena.​
 
 - Valet av plastkapsling beror på att den skyddar elektroniken mot smuts, stötar och yttre påverkan. Plast är ett bra och effektivt material då den är lätt och elektriskt isolerande vilket är extra viktigt i fuktiga miljöer där epoxi används.
 

@@ -42,7 +42,7 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 
 ---
 
-## Steg 1 – Installera utvecklingsmiljö
+## Steg 2 – Installera utvecklingsmiljö
 
 1. Ladda ner och installera Arduino IDE
 2. Lägg till ESP8266 via Board Manager
@@ -55,7 +55,7 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
    
 ---
 
-## Steg 2 – Installera bibliotek i Arduino IDE
+## Steg 3 – Installera bibliotek i Arduino IDE
 
 Följande bibliotek används:
 
@@ -65,7 +65,7 @@ Följande bibliotek används:
 * WiFiUdp.h - WiFi
 * NTPClient – tidsstämplar
 
-## Steg 3 – Programmera sensorn i Arduino IDE
+## Steg 4 – Programmera sensorn i Arduino IDE
 
 1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
 2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
@@ -85,7 +85,7 @@ Följande kommer alltså att ske:
 Mätning sker varannan sekund.
 
 ---
-## Steg 4 – Ladda ned och använd Mosquitto (MQTT)
+## Steg 5 – Ladda ned och använd Mosquitto (MQTT)
 
 ### Installera Mosquitto
 Ladda ned Mosquitto från följande länk:  
@@ -113,7 +113,7 @@ Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. D
 
 ---
 
-## Steg 5 VSC
+## Steg 6 VSC
 Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
 
 Skapa följande dokument i VSC och klistra in bifogad kod:

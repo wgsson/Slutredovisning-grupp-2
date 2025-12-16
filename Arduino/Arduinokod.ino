@@ -1,6 +1,5 @@
 #include <ESP8266WiFi.h>
-#include <PubSubClient.h>
-#include "DHT.h"
+#include <DHT.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 #include <ArduinoMqttClient.h>
@@ -14,12 +13,7 @@ DHT dht(DHTPIN, DHTTYPE);
 const char* ssid = "MDU_guest";
 const char* password = "Frozen202512";
 
-// ---- MQTT Inställningar ----
-const char* mqtt_server = "192.168.1.100"; // Byt till IP där Mosquitto körs
-const int mqtt_port = 1883;
-
 WiFiClient espClient;
-PubSubClient client(espClient);
 MqttClient mqttClient(espClient);
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
@@ -34,7 +28,7 @@ const char topic[] = "Gsson";
 const char topic2[] = "Gsson/temp";
 const char topic3[] = "Gsson/RH";
 
-const long interval = 2000;
+const long interval = 30000;
 unsigned long previousMillis = 0;
 
 int count = 0;

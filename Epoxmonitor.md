@@ -68,27 +68,9 @@ Följande bibliotek används:
 * WiFiUdp.h - WiFi
 * NTPClient – tidsstämplar
 
-## Steg 4 – Programmera sensorn i Arduino IDE
-
-1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
-2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
-3. Välj rätt "Port" under "Tools"
-4. Tryck "Upload"
-5. Öppna Tools och tryck på Serial Monitor
-6. Säkerställ att mikrokontrollen är ansluten till Wi-fi
-7. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
-
-Följande kommer alltså att ske:
-
-* Initierar WiFi-anslutning
-* Läser luftfuktighet från DHT11
-* Hämtar aktuell tid via NTP
-* Skickar data till MQTT-broker (test.mosquitto.org) 
-
-Mätning sker varannan sekund.
-
 ---
-## Steg 5 – Ladda ned och använd Mosquitto (MQTT)
+
+## Steg 4 – Ladda ned och använd Mosquitto (MQTT)
 
 ### Installera Mosquitto
 Ladda ned Mosquitto från följande länk:  
@@ -106,13 +88,27 @@ https://mosquitto.org/download/
 ### Starta en subscriber på samma topic
 ``mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH``
 
-I detta fönster ska nu data som skickas från sensorn visas. 
-<img width="471" height="196" alt="image" src="https://github.com/user-attachments/assets/7efef7ba-b4aa-4e9e-b798-bf8a7003ce95" />
-
-
 ### Förklaring
 Sensorn fungerar som publisher och publicerar mätdata (RH) till topic Gsson/RH via en MQTT-broker (test.mosquitto.org).
 Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. Den mottagna datan kan därefter visualiseras och presenteras på ett lättförståeligt sätt.
+
+---
+
+## Steg 5 – Programmera sensorn i Arduino IDE
+
+1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
+2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
+3. Välj rätt "Port" under "Tools"
+4. Tryck "Upload"
+5. Öppna Tools och tryck på Serial Monitor
+6. Säkerställ att mikrokontrollen är ansluten till Wi-fi
+7. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
+
+BYT UT BILD TILL SERIAL MONITOR
+    
+<img width="471" height="196" alt="image" src="https://github.com/user-attachments/assets/7efef7ba-b4aa-4e9e-b798-bf8a7003ce95" />
+
+Mätning sker varannan sekund.
 
 ---
 

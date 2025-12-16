@@ -44,10 +44,13 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 
 ## Steg 2 – Installera utvecklingsmiljö
 
-1. Ladda ner och installera Arduino IDE
-2. Lägg till ESP8266 via Board Manager
-3. Välj rätt board (ESP8266) och port
-4. Ställ in aktuellt:
+1. Ladda ner och installera Arduino IDE på följande länk:
+   
+   https://docs.arduino.cc/software/ide/#ide-v2
+
+3. Lägg till ESP8266 via Board Manager
+4. Välj rätt board (ESP8266) och port
+5. Ställ in aktuellt:
    - WiFi SSID
    - WiFi lösenord
    - Korrekt IP-adress
@@ -122,6 +125,7 @@ Skapa följande dokument i VSC och klistra in bifogad kod:
 - CSS (style.css)
 
   Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
+  
   <img width="320" height="558" alt="Skärmbild 2025-12-15 093511" src="https://github.com/user-attachments/assets/362dc2b4-ed9e-469e-9559-ee294901ae73" />
 
 

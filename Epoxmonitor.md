@@ -123,7 +123,16 @@ Skapa följande dokument i VSC och klistra in bifogad kod:
 
   Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
 
-<img width="260" height="379" alt="image" src="https://github.com/user-attachments/assets/5da648c3-3762-4604-b10d-adea24fe55d3" />
 
 ## Kapsulering
 Bild på kapsulering här 
+
+- Väggfästet är utformat för yrkeshantverkare som arbetar med epoxi i industrilokaler. I dessa miljöer är det oftast stressigt och därmed viktigt att utrustningen är enkel att montera, lätt att flytta och smidig att ta med sig mellan olika arbetsplatser.
+
+- Målet med väggfästet är att NodeMCU och DHT11-sensorn ska sitta skyddade och på rätt höjd för att kunna mäta luftfuktigheten och ge pålitliga värden. Lösningen består av en plastkapsling där mikrokontrollern placeras, medan DHT11-sensorn monteras i ett litet hål i kapslingen så att själva sensordelen sticker ut i luften. Detta görs för att undvika inkapslingspåverkan, där sensorn annars riskerar att mäta luften i kapslingen istället för luften i rummet.
+
+- På baksidan av kapslingen sitter ett magnetfäste. Detta tillåter sensorn att enkelt fästas direkt på metallväggar i industrilokaler. Om väggen inte är av metall kan en tunn metallplatta fästas med dubbelhäftande tejp. Denna lösning är effektiv då den inte kräver verktyg och skadar inte väggarna. Magnet fästet gör det även enkelt att ta ner, flytta och sätta upp sensorn vid behov.
+
+- Valet av plastkapsling beror på att den skyddar elektroniken mot smuts, stötar och yttre påverkan. Plast är ett bra och effektivt material då den är lätt och elektriskt isolerande vilket är extra viktigt i fuktiga miljöer där epoxi används.
+
+- Magnet fästet och den delvis öppna kapslingen är en tydlig designanpassning till både användare och kontext. För yrkeshantverkare innebär det en lättare och snabbare lösning för att avgöra om förhållandena är rätt för att applicera epoxi och när nästa lager kan läggas. Detta minskar risken för felhärdning, bubblor, missfärgning och försämrad hållbarhet hos epoxigolv.

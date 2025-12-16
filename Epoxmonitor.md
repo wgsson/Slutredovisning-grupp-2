@@ -6,40 +6,29 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 
 ## Bill of Materials
 ### Material
-* Dator
-* Plusivokit
-  - DHT11 - RH-sensor
-  - ESP8266 – mikrokontroller med WiFi
-  - Batteri + DC-sladd
-  - Breadboard
-  - Kopplingskablar
-<img width="205" height="182" alt="image" src="https://github.com/user-attachments/assets/cf9015f9-0a62-4e25-9dac-1f5e90f93b6b" />
+
+| Namn | Antal | Beskrivning |
+|------|------- |-----|
+| Dator |1|Används för programmering och datahantering |
+| Plusivokit |1| Innehåller grundläggande elektronikkomponenter |
+| DHT11 |1|Sensor för temperatur och relativ luftfuktighet |
+| ESP8266 |1| Mikrokontroller med inbyggt WiFi |
+| Batteri |1| Strömförsörjning |
+| DC-sladd |1| Anslutning för ström |
+| Breadboard |1| Kopplingsdäck för prototypkoppling |
+| Kopplingskablar |1| Förbindelser mellan komponenter |
 
 ### Program
-* Arduino IDE 
 
-* Mosquitto Eclipse - MQTT för datakommunikation 
-
-* Visual Studio Code - visualisering av data 
-
-<img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/15c86fdf-2ee7-46ad-aba9-5888d537b975" /> <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/d02ea206-3b95-417e-9c20-4f8fe3a27cc7" /> <img width="80" height="600" alt="image" src="https://github.com/user-attachments/assets/02b8c254-986d-4f0f-ba5d-9cc45071f9b3" />
-
+| Namn | Beskrivning |
+|------|-------------|
+| Arduino IDE | Programmering av mikrokontroller |
+| Mosquitto Eclipse | MQTT-broker för datakommunikation |
+| Visual Studio Code | Visualisering och hantering av data |
 
 ---
 
-## Användare och kontext
-
-**Användare:** Yrkeshantverkare som arbetar med epoxi (t.ex. golvläggare).
-
-**Kontext:** Industrilokaler och arbetsmiljöer med tidspress, varierande klimat och begränsad möjlighet till manuell mätning.
-
-**Behov:** Snabb och tydlig information om luftfuktighet utan att behöva tolka rådata.
-
----
-
-## Sensor (DHT11) och konstruktion (ESP8266)
-<img width="181" height="160" alt="image" src="https://github.com/user-attachments/assets/03f903f6-3a82-414c-af93-8d2b28bf288d" /> <img width="146" height="244" alt="image" src="https://github.com/user-attachments/assets/97cb8c23-f889-4a9e-b3af-e6768a791448" />
-
+## Steg 1- Sensor (DHT11) och konstruktion (ESP8266)
 
 **Koppling:**
 
@@ -49,9 +38,7 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 
 <img width="272" height="390" alt="image" src="https://github.com/user-attachments/assets/f566f9ec-bb10-43c1-a04c-4eb342e4d932" />
 
-
-
-Tips: ESP8266-guide ligger i repot!
+*Tips: ESP8266-guide ligger i repot!*
 
 ---
 
@@ -105,18 +92,20 @@ Ladda ned Mosquitto från följande länk:
 https://mosquitto.org/download/
 
 ### Starta Mosquitto lokalt
-Öppna **Kommandotolken** och kör följande kommandon:
+Öppna Kommandotolken och kör följande kommandon för att hamna i rätt mapp och för att starta Mosquitto:
 
-cd "C:\Program Files\mosquitto"
-mosquitto.exe
+1. ```cd C:\Program Files\mosquitto```
+2. ```mosquitto.exe```
 
 ### Starta en publisher
-mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH
+``mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH``
 
 ### Starta en subscriber på samma topic
-mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH
+``mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH``
 
 I detta fönster ska nu data som skickas från sensorn visas. 
+<img width="471" height="196" alt="image" src="https://github.com/user-attachments/assets/7efef7ba-b4aa-4e9e-b798-bf8a7003ce95" />
+
 
 ### Förklaring
 Sensorn fungerar som publisher och publicerar mätdata (RH) till topic Gsson/RH via en MQTT-broker (test.mosquitto.org).

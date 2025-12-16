@@ -70,7 +70,6 @@ Följande bibliotek används:
 * Adafruit Unified Sensor – beroende för DHT
 * ArduinoMqttClient – MQTT-kommunikation
 * WiFiUdp.h - WiFi
-* PubSubClient.h - 
 * NTPClient – tidsstämplar
 
 ## Steg 3 – Programmera sensorn
@@ -93,33 +92,35 @@ Följande kommer alltså att ske:
 Mätning sker varannan sekund.
 
 ---
+## Steg 4 – Ladda ned och använd Mosquitto (MQTT)
 
-## Steg 4- Ladda ned Mosquitto (MQTT-applikation)
-Ladda ned Mosquitto på följande länk: ​ https://mosquitto.org/download/
+### Installera Mosquitto
+Ladda ned Mosquitto från följande länk:  
+https://mosquitto.org/download/
 
-Öppna kommandotolk och skriv in följande för att starta applikationen lokalt: 
+### Starta Mosquitto lokalt
+Öppna **Kommandotolken** och kör följande kommandon:
 
-->**cd C:"Program Files\mosquitto**
--> **mosquitto.exe** 
--> **mosquitto.exe -v**
+cd "C:\Program Files\mosquitto"
+mosquitto.exe
 
-<img width="464" height="172" alt="image" src="https://github.com/user-attachments/assets/e3a46d63-448d-453a-937b-eec51f5721a0" />
+### Starta en publisher
+mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH
 
-Följande för att starta en publisher:
-->**mosquitto_pub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
+### Starta en subscriber på samma topic
+mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH
 
-Följande för att starta en subscriber: 
--> **mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t Gsson/RH**
-I detta fönster bör nu data skickad från sensorn dyka upp. 
+I detta fönster ska nu data som skickas från sensorn visas. 
 
-
-
-Sensorn agerar publisher och publicerar data (RH) genom topic Gsson/RH via en MQTT Broker (test.mosquitto.org) och skickar vidare data till en subscriber, vår hemsida (VSC), som prennumererar på samma topic. Subscriber kan då visualisera data och göra den enkel att tolka.
+### Förklaring
+Sensorn fungerar som publisher och publicerar mätdata (RH) till topic Gsson/RH via en MQTT-broker (test.mosquitto.org).
+Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. Den mottagna datan kan därefter visualiseras och presenteras på ett lättförståeligt sätt.
 
 ---
 
 ## Steg 5 VSC
 Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
+
 Skapa följande dokument i VSC och klistra in bifogad kod:
 - JavaScript (app.js)
 - HTML (index.html)

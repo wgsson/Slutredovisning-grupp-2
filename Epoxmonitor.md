@@ -60,6 +60,12 @@ Tips: ESP8266-guide ligger i repot!
 1. Ladda ner och installera Arduino IDE
 2. Lägg till ESP8266 via Board Manager
 3. Välj rätt board (ESP8266) och port
+4. Ställ in aktuellt:
+   - WiFi SSID
+   - WiFi lösenord
+   - Korrekt IP-adress
+   - Korrekt port
+   
 ---
 
 ## Steg 2 – Installera bibliotek

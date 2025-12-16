@@ -55,7 +55,7 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
    
 ---
 
-## Steg 2 – Installera bibliotek
+## Steg 2 – Installera bibliotek i Arduino IDE
 
 Följande bibliotek används:
 
@@ -65,7 +65,7 @@ Följande bibliotek används:
 * WiFiUdp.h - WiFi
 * NTPClient – tidsstämplar
 
-## Steg 3 – Programmera sensorn
+## Steg 3 – Programmera sensorn i Arduino IDE
 
 1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
 2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator

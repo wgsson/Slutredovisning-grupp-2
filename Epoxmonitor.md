@@ -114,7 +114,7 @@ Mätning sker varannan sekund.
 
 ---
 
-## Steg 6 VSC
+## Steg 6 VSC- Visualisering
 Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
 
 Skapa följande dokument i VSC och klistra in bifogad kod:

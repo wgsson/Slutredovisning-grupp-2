@@ -5,7 +5,7 @@
 Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas.
 
 ## Bill of Materials
-### Material
+### Hårdvara
 
 | Namn | Antal | Beskrivning |
 |------|------- |-----|
@@ -17,10 +17,11 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
 | DC-sladd |1| Anslutning för ström |
 | Breadboard |1| Kopplingsdäck för prototypkoppling |
 | Kopplingskablar |1| Förbindelser mellan komponenter |
+| Plastkapsulering |1| Skydda artefakten |
 
 ### Program
 
-| Namn | Beskrivning |
+| Namn | Mjukvara |
 |------|-------------|
 | Arduino IDE | Programmering av mikrokontroller |
 | Mosquitto Eclipse | MQTT-broker för datakommunikation |
@@ -49,8 +50,9 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
    https://docs.arduino.cc/software/ide/#ide-v2
 
 3. Lägg till ESP8266 via Board Manager
-4. Välj rätt board (ESP8266) och port
-5. Ställ in aktuellt:
+4. Välj rätt board (ESP8266) -> NodeMCU 1.0
+5. Välj rätt port
+6. Ställ in aktuellt:
    - WiFi SSID
    - WiFi lösenord
    - Korrekt IP-adress

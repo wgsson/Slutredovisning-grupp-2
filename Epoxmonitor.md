@@ -122,6 +122,8 @@ Skapa följande dokument i VSC och klistra in bifogad kod:
 - CSS (style.css)
 
   Klicka på "Go Live" och säkerställ att Epoxmonitor fungerar.
+  <img width="320" height="558" alt="Skärmbild 2025-12-15 093511" src="https://github.com/user-attachments/assets/362dc2b4-ed9e-469e-9559-ee294901ae73" />
+
 
 
 ## Kapsulering

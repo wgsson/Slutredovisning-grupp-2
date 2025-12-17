@@ -46,12 +46,14 @@ Det här repot ger dig instruktioner hur du kan utveckla din egna luftfuktighets
 ---
 
 ## Steg 2 – Installera utvecklingsmiljö
+Ladda ner och installera Arduino IDE på följande länk:
 
-1. Ladda ner och installera Arduino IDE på följande länk:
-
-   [Arduino IDE](https://docs.arduino.cc/software/ide/#ide-v2)
+[Arduino IDE](https://docs.arduino.cc/software/ide/#ide-v2)
    
+### Inställningar
+1. File -> Preferences -> Additional Boards Manager URL och klistra in:
    
+   `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 3. Lägg till ESP8266 via Board Manager
 4. Välj rätt board (ESP8266) -> NodeMCU 1.0 

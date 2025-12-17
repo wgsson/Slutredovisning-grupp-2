@@ -4,7 +4,7 @@
 
 Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas. 
 
-Det här repot ger dig instruktioner hur du kan utveckla din egna luftfuktighetssensor samt skapa en visualisering med livedata i ett webbgränssnitt. Koder hittar du i respektive mapp. 
+Det här repot ger dig instruktioner hur du kan utveckla din egna luftfuktighetssensor samt skapa en visualisering med livedata i ett webbgränssnitt. Koder hittar du i respektive mapp. Samtligt kod är skapad med hjälp av Vibe Coding. 
 
 ## Bill of Materials
 ### Hårdvara
@@ -99,6 +99,7 @@ Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. D
    - WiFi lösenord
    - Korrekt IP-adress
    - Korrekt port
+   - Korrekt topic
 3. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
 4. Välj rätt "Port" under "Tools"
 5. Tryck "Upload"

@@ -2,7 +2,9 @@
 
 ## Projektöversikt
 
-Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas.
+Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- och industrimiljöer. Genom kontinuerlig mätning av relativ luftfuktighet (RH) skapas ett enkelt beslutsstöd för när epoxi kan appliceras och när nästa lager kan läggas. 
+
+Det här repot ger dig instruktioner hur du kan utveckla din egna luftfuktighetssensor samt skapa en visualisering med livedata i ett webbgränssnitt. Koder hittar du i respektive mapp. 
 
 ## Bill of Materials
 ### Hårdvara
@@ -50,14 +52,7 @@ Projektet undersöker hur luftfuktighet påverkar arbete med epoxi i hantverks- 
    https://docs.arduino.cc/software/ide/#ide-v2
 
 3. Lägg till ESP8266 via Board Manager
-4. Välj rätt board (ESP8266) -> NodeMCU 1.0
-5. Välj rätt port
-6. Ställ in aktuellt:
-   - WiFi SSID
-   - WiFi lösenord
-   - Korrekt IP-adress
-   - Korrekt port
-   
+4. Välj rätt board (ESP8266) -> NodeMCU 1.0 
 ---
 
 ## Steg 3 – Installera bibliotek i Arduino IDE
@@ -99,12 +94,17 @@ Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. D
 ## Steg 5 – Programmera sensorn i Arduino IDE
 
 1. Koden "Arduinokod.ino" placeras i Arduino IDE på tomt canvas.
-2. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
-3. Välj rätt "Port" under "Tools"
-4. Tryck "Upload"
-5. Öppna Tools och tryck på Serial Monitor
-6. Säkerställ att mikrokontrollen är ansluten till Wi-fi
-7. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
+2. Ställ in aktuellt:
+   - WiFi SSID
+   - WiFi lösenord
+   - Korrekt IP-adress
+   - Korrekt port
+3. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
+4. Välj rätt "Port" under "Tools"
+5. Tryck "Upload"
+6. Öppna Tools och tryck på Serial Monitor
+7. Säkerställ att mikrokontrollen är ansluten till Wi-fi
+8. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
 
 BYT UT BILD TILL SERIAL MONITOR
     

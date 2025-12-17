@@ -48,8 +48,10 @@ Det här repot ger dig instruktioner hur du kan utveckla din egna luftfuktighets
 ## Steg 2 – Installera utvecklingsmiljö
 
 1. Ladda ner och installera Arduino IDE på följande länk:
+
+   [Arduino IDE](https://docs.arduino.cc/software/ide/#ide-v2)
    
-   https://docs.arduino.cc/software/ide/#ide-v2
+   
 
 3. Lägg till ESP8266 via Board Manager
 4. Välj rätt board (ESP8266) -> NodeMCU 1.0 
@@ -71,7 +73,8 @@ Följande bibliotek används:
 
 ### Installera Mosquitto
 Ladda ned Mosquitto från följande länk:  
-https://mosquitto.org/download/
+[Mosquitto](https://mosquitto.org/download/)
+
 
 ### Starta Mosquitto 
 Öppna Kommandotolken och kör följande kommandon för att hamna i rätt mapp och för att starta Mosquitto:
@@ -116,7 +119,9 @@ Mätning sker varannan sekund.
 ---
 
 ## Steg 6 VSC- Visualisering
-Ladda ned Visual Studio Code på följande länk: https://code.visualstudio.com/Download
+Ladda ned Visual Studio Code på följande länk: 
+
+[Visual Studio Code](https://code.visualstudio.com/Download)
 
 Skapa följande dokument i VSC och klistra in bifogad kod:
 - JavaScript (app.js)

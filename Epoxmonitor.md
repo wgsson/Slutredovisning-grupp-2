@@ -73,7 +73,7 @@ Följande bibliotek används:
 Ladda ned Mosquitto från följande länk:  
 https://mosquitto.org/download/
 
-### Starta Mosquitto lokalt
+### Starta Mosquitto 
 Öppna Kommandotolken och kör följande kommandon för att hamna i rätt mapp och för att starta Mosquitto:
 
 1. ```cd C:\Program Files\mosquitto```
@@ -97,9 +97,9 @@ Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. D
 2. Ställ in aktuellt:
    - WiFi SSID
    - WiFi lösenord
-   - Korrekt IP-adress
-   - Korrekt port
-   - Korrekt topic
+   - IP-adress
+   - Port
+   - Topic
 3. Koppla in breadboard med DHT11 och ESP8266 via USB-c till din dator
 4. Välj rätt "Port" under "Tools"
 5. Tryck "Upload"

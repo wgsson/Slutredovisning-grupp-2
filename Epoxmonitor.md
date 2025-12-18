@@ -111,12 +111,9 @@ Vår webbapplikation fungerar som subscriber och prenumererar på samma topic. D
 6. Öppna Tools och tryck på Serial Monitor
 7. Säkerställ att mikrokontrollen är ansluten till Wi-fi
 8. Data över luftfuktigheten från DHT11 bör synas och uppdateras kontinuerligt
-
-BYT UT BILD TILL SERIAL MONITOR
     
-<img width="471" height="196" alt="image" src="https://github.com/user-attachments/assets/7efef7ba-b4aa-4e9e-b798-bf8a7003ce95" />
+<img width="436" height="104" alt="Skärmbild 2025-12-15 091701" src="https://github.com/user-attachments/assets/6454d950-501a-4dcf-8622-6fa3d0ec98ff" />
 
-Mätning sker varannan sekund.
 
 ---
 
